@@ -1,12 +1,19 @@
 package com.smsm.ecommerce.domain;
 
-import javafx.scene.control.CustomMenuItem;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.Set;
 
+@Data
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,6 +26,5 @@ public class Product {
     private Instant lastUpdate ;
     @ManyToOne
     private Category category;
-
 
 }

@@ -7,9 +7,8 @@ import java.time.Instant;
 import java.util.Set;
 
 public class CategoryDTO {
-private Integer id ;
-private String name;
-private Instant lastUpdate;
-private Set<ProductDTO> products;
-
+    private Integer id ;
+    private String name;
+    private Instant lastUpdate;
+    private Set<ProductDTO> products;
 }
