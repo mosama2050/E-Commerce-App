@@ -22,4 +22,5 @@ public class CustomerDTO {
     private  String phone ;
     private  String city ;
     private  String postalCode;
+    private  String address;
 }

@@ -20,8 +20,8 @@ public abstract class ProductMapper {
 
 
     @Mapping(target = "category", source="categoryId")
-    @Mapping(target ="id", source="productDTO.id")
-    @Mapping(target="lastUpdate", source="productDTO.lastUpdate")
+//    @Mapping(target ="id", source="productDTO.id")
+//    @Mapping(target="lastUpdate", source="productDTO.lastUpdate")
     public abstract Product map(ProductDTO productDTO);
 
     public Category toCategory(Integer id) {

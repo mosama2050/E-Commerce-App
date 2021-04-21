@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer id ;
     private  String firstName ;
     private  String lastName ;
@@ -23,6 +23,8 @@ public class Customer {
     private  String phone ;
     private  String city ;
     private  String postalCode;
+    private  String address;
+
 
 //    @OneToMany(cascade = CascadeType.ALL ,mappedBy = "customer")
 //    private Set<CustomerOrder>customerOrders;

@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class OrderLineItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private int quantity;
     @ManyToOne

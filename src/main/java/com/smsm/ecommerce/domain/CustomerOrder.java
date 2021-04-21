@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -16,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class CustomerOrder {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String orderStatus;
     private double orderAmount; // kilo w nos tmatm
@@ -27,7 +28,7 @@ public class CustomerOrder {
             inverseJoinColumns   = @JoinColumn(name = "customer_order_id"),
             joinColumns     =@JoinColumn(name = "line_item_id")
     )
-    private Set<OrderLineItem>orderLineItems;
+    private List<OrderLineItem> orderLineItems;
 
 //    @OneToOne
 //    private  Payment payment;

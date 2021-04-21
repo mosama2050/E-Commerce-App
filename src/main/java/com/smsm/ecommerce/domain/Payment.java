@@ -17,7 +17,7 @@ import static javax.persistence.FetchType.LAZY;
 @NoArgsConstructor
 public class Payment {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Integer id;
     private  double amount;
     private Instant date;
