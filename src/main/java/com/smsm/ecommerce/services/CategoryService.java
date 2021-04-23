@@ -5,9 +5,7 @@ import com.smsm.ecommerce.api.model.CustomerDTO;
 import com.smsm.ecommerce.domain.Customer;
 import com.smsm.ecommerce.repository.CustomerRepository;
 import lombok.extern.slf4j.Slf4j;
-import sun.rmi.runtime.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

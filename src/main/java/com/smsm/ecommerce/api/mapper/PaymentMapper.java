@@ -22,8 +22,10 @@ public abstract class PaymentMapper {
     @Autowired
     CustomerOrderRepository customerOrderRepository;
 
-    @Mapping(expression = "java(getCustomer(paymentDTO.getCustomerId()))", target = "customer")
-    @Mapping(expression = "java(getCustomerOrder(paymentDTO.getCustomerOrderId()))", target = "customerOrder")
+//    @Mapping(expression = "java(getCustomer(paymentDTO.getCustomerId()))", target = "customer")
+//    @Mapping(expression = "java(getCustomerOrder(paymentDTO.getCustomerOrderId()))", target = "customerOrder")
+    @Mapping(source = "customerOrderId", target = "customerOrder.id")
+    @Mapping(source = "customerId", target = "customer.id")
     public abstract Payment map(PaymentDTO paymentDTO);
 
     @Mapping(target = "customerOrderId", source = "customerOrder.id")

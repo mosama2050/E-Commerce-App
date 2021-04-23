@@ -30,6 +30,8 @@ public class OrderLineItem {
     private Set<CustomerOrder> customerOrders;
 
 
-
+    public double calTotal(){
+        return quantity * product.getPrice();
+    }
 
 }
