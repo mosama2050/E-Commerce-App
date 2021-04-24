@@ -39,6 +39,7 @@ public class CustomerOrder {
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
+
     public boolean add(OrderLineItem orderLineItem) {
         return orderLineItems.add(orderLineItem);
     }
